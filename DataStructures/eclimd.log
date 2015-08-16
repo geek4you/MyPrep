@@ -1,0 +1,17 @@
+2015-04-26 21:59:20,727 INFO  [org.eclim.eclipse.EclimDaemon] Workspace: /Users/Pradeep/Documents/workspace-intellij/DataStructures
+2015-04-26 21:59:20,729 INFO  [org.eclim.eclipse.EclimDaemon] Home: /Users/Pradeep/Dev/eclipse/plugins/org.eclim_2.4.1/
+2015-04-26 21:59:20,729 INFO  [org.eclim.eclipse.EclimDaemon] Starting eclim...
+2015-04-26 21:59:20,737 INFO  [org.eclim.eclipse.EclimDaemon] Loading plugin org.eclim
+2015-04-26 21:59:20,738 INFO  [org.eclim.eclipse.EclimDaemon] Loading plugin org.eclim.core
+2015-04-26 21:59:20,832 INFO  [org.eclim.plugin.core.CorePlugin] Loading eclim plugins...
+2015-04-26 21:59:20,837 INFO  [org.eclim.plugin.core.CorePlugin] Loading plugin org.eclim.jdt
+2015-04-26 21:59:20,838 INFO  [org.eclim.plugin.core.CorePlugin] Loading plugin org.eclim.pydev
+2015-04-26 21:59:20,841 INFO  [org.eclim.plugin.core.CorePlugin] Loading plugin org.eclim.sdt
+2015-04-26 21:59:20,843 INFO  [org.eclim.plugin.core.CorePlugin] Plugins loaded.
+2015-04-26 21:59:20,844 INFO  [org.eclim.eclipse.EclimDaemon] Loaded plugin org.eclim.core
+2015-04-26 21:59:20,845 INFO  [org.eclim.eclipse.EclimDaemon] Waiting on running jobs before starting eclimd...
+2015-04-26 21:59:24,862 INFO  [org.eclim.eclipse.EclimDaemon] Jobs finished.
+2015-04-26 21:59:24,862 INFO  [org.eclim.eclipse.EclimDaemon] Eclim Server Started on: 0.0.0.0:10012
+2015-04-26 22:19:05,776 INFO  [org.eclim.plugin.core.CorePlugin] Stopping plugin org.eclim.jdt
+2015-04-26 22:19:05,777 INFO  [org.eclim.plugin.core.CorePlugin] Stopping plugin org.eclim.pydev
+2015-04-26 22:19:05,777 INFO  [org.eclim.plugin.core.CorePlugin] Stopping plugin org.eclim.sdt
