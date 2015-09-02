@@ -6,6 +6,6 @@
  * Given n line segments, find if any two segments intersect
  * @link: http://www.geeksforgeeks.org/given-a-set-of-line-segments-find-if-any-two-segments-intersect/
  */
-public class LineSegmentsIntersect {
+public class LineSegmentsNIntersect {
 
 }
