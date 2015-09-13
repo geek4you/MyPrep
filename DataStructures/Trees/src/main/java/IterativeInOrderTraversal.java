@@ -4,7 +4,7 @@ import java.util.Deque;
 /**
  * Created by chanumolu on 7/4/15.
  */
-public class InorderWithoutRecurssion {
+public class IterativeInOrderTraversal {
 
 
     // using stack
