@@ -28,6 +28,7 @@
     <module>IntervalProblems</module>
     <module>StreamProblems</module>
     <module>SearchPatterns</module>
+    <module>MultiThreading</module>
   </modules>
   <packaging>pom</packaging>
 

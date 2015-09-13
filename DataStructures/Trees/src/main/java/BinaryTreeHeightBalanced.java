@@ -26,6 +26,50 @@ public class BinaryTreeHeightBalanced {
                 (isHeightBalanced(root.left) && isHeightBalanced(root.right));
     }
 
+    /* Takes O(n) time */
+    /*Above implementation can be optimized by calculating the height in the same recursion rather than calling a height()
+     function separately. Thanks to Amar for suggesting this optimized version. This optimization reduces time complexity to O(n). */
+
+    /* The function returns true if root is balanced else false
+   The second parameter is to store the height of tree.
+   Initially, we need to pass a pointer to a location with value
+   as 0. We can also write a wrapper over this function */
+    public static boolean isBalanced(Node root, IntegerObject height) {
+
+        /* lh --> Height of left subtree
+           rh --> Height of right subtree */
+        IntegerObject lh = new IntegerObject(0);
+        IntegerObject rh = new IntegerObject(0);
+
+        /* l will be true if left subtree is balanced
+        and r will be true if right subtree is balanced */
+        boolean l = false, r = false;
+
+        if (root == null) {
+            height.height = 0;
+            return true;
+        }
+
+        /* Get the heights of left and right subtrees in lh and rh
+            And store the returned values in l and r */
+        l = isBalanced(root.left, lh);
+        r = isBalanced(root.right, rh);
+
+        /* Height of current node is max of heights of left and
+            right subtrees plus 1*/
+        height.height = (lh.height > rh.height ? lh : rh).height + 1;
+
+        /* If difference between heights of left and right
+            subtrees is more than 2 then this node is not balanced
+            so return 0 */
+        if ((lh.height - rh.height >= 2) || (rh.height - lh.height >= 2))
+            return false;
+
+        /* If this node is balanced and left and right subtrees
+            are balanced then return true */
+        else return l && r;
+    }
+
     public static void main(String[] args) {
         Node root1 = new Node(1);
         root1.left = new Node(2);
@@ -42,6 +86,17 @@ public class BinaryTreeHeightBalanced {
 
         System.out.println(isHeightBalanced(root1));
         System.out.println(isHeightBalanced(root2));
+
+        System.out.println(isBalanced(root1, new IntegerObject(0)));
+        System.out.println(isBalanced(root2, new IntegerObject(0)));
+    }
+
+    static class IntegerObject {
+        int height;
+
+        public IntegerObject(int height) {
+            this.height = height;
+        }
     }
 
 
