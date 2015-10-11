@@ -9,13 +9,13 @@
  * <p>
  * For example, the below tree doesn’t hold the children sum property, convert it to a tree that holds the property.
  * <p>
- * 50
- * /     \
- * /         \
- * 7             2
- * / \             /\
- * /     \          /   \
- * 3        5      1      30
+ *           50
+ *          /     \
+ *        /         \
+ *       7             2
+ *      / \             /\
+ *    /     \          /   \
+ *   3        5      1      30
  */
 public class ConvertChildrenSumProperty {
 

@@ -70,6 +70,11 @@ public class PrintAllPossibleStringsOfLengthKFromNChars {
         char set2[] = {'a', 'b', 'c', 'd'};
         k = 1;
         print(set2, k);
+
+        System.out.println("\nThrid Test");
+        char set3[] = {'a', 'b', 'c', 'd'};
+        k = 3;
+        print(set3, k);
     }
 
 }

@@ -22,22 +22,30 @@ public class BoundaryTraversalBinaryTree {
 
     }
 
+    // A function to print all left boundry nodes, except a leaf node.
+    // Print the nodes in TOP DOWN manner
     public static void printLeftNodesTopToBottom(Node root) {
 
         if (null == root)
             return;
 
         Node current = root;
+
         if (current.left != null) {
+            // to ensure top down order, print the node
+            // before calling itself for left subtree
             System.out.println(current.data);
             printLeftNodesTopToBottom(current.left);
-        }else if(current.right!=null){
+        } else if (current.right != null) {
             System.out.println(current.data);
             printLeftNodesTopToBottom(current.right);
         }
+        // do nothing if it is a leaf node, this way we avoid
+        // duplicates in output
 
     }
 
+    // A simple function to print leaf nodes of a binary tree
     public static void printLeafNodesLeftToRight(Node root) {
 
         if (null == root)
@@ -52,18 +60,24 @@ public class BoundaryTraversalBinaryTree {
         printLeafNodesLeftToRight(root.right);
     }
 
+    // A function to print all right boundry nodes, except a leaf node
+    // Print the nodes in BOTTOM UP manner
     public static void printRightNodesBottomToTop(Node root) {
 
         if (null == root)
             return;
 
         if (root.right != null) {
+            // to ensure bottom up order, first call for right
+            //  subtree, then print this node
             printRightNodesBottomToTop(root.right);
             System.out.println(root.data);
-        }else if(root.left!=null){
+        } else if (root.left != null) {
             printRightNodesBottomToTop(root.left);
             System.out.println(root.data);
         }
+        // do nothing if it is a leaf node, this way we avoid
+        // duplicates in output
 
     }
 
