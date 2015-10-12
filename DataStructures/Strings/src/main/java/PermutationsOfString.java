@@ -13,6 +13,9 @@ import java.util.Arrays;
  * explanation : https://www.youtube.com/watch?v=MQcwxQK2DPA
  * <p>
  * Time Complexity: O(n*n!)
+ *
+ *
+ * The best solution is the one from the EPL. But doesnot work for duplicates. 
  */
 public class PermutationsOfString {
 
@@ -41,8 +44,11 @@ public class PermutationsOfString {
     }
 
     public static void main(String[] args) {
-        String str = "prade";
+        String str = "abc";
+        permute(str.toCharArray(),0,2);
+        //String str = "prade";
         //permute(str.toCharArray(), 0, 4);
+        //permutations(str.toCharArray());
         permutations(str.toCharArray());
     }
 
@@ -94,6 +100,21 @@ public class PermutationsOfString {
             --j;
         }
     }
+
+    /**
+     * Third way to find permutation
+     */
+    private static void generatePermutation(String prefix, String sequence) {
+
+        if(sequence.length() == 0) System.out.println(prefix);
+
+        for (int i = 0; i < sequence.length(); i++) {
+            generatePermutation(prefix + sequence.charAt(i), sequence.substring(0, i) + sequence.substring(i+1));
+        }
+
+    }
+
+
 }
 
 
