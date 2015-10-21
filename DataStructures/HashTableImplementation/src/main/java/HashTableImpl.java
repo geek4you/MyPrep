@@ -7,7 +7,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/** 
  * Brief intro
  *
  * Hash table is used to store objects according to their key in an array. Objects are stored in array based on the hash value
