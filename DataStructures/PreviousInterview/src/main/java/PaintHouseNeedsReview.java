@@ -36,7 +36,7 @@ import java.util.Arrays;
  * Cost: 18
  */
 
-public class PaintHouse {
+public class PaintHouseNeedsReview {
     public class BestResult {
         public int[] colors;
         public int cost;
@@ -51,7 +51,7 @@ public class PaintHouse {
     private int[][] cost;
     private BestResult[][] best;
 
-    public PaintHouse(int[][] cost) {
+    public PaintHouseNeedsReview(int[][] cost) {
         this.cost = cost;
         this.best = new BestResult[cost.length][cost[0].length];
     }
@@ -94,7 +94,7 @@ public class PaintHouse {
                 new int[]{5, 6, 7, 2, 4, 3},
                 new int[]{10, 1, 4, 9, 7, 6}
         };
-        PaintHouse calc = new PaintHouse(cost);
+        PaintHouseNeedsReview calc = new PaintHouseNeedsReview(cost);
         BestResult bestResult = calc.calc();
         System.out.println("Colors: " + Arrays.toString(bestResult.colors));
         System.out.println("Cost: " + bestResult.cost);

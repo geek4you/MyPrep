@@ -19,14 +19,15 @@ import java.util.Deque;
  * <p>
  * level order traversal post can be easily modified to check whether a tree is Complete or not. To understand the approach,
  * let us first define a term ‘Full Node’. A node is ‘Full Node’ if both left and right children are not empty (or not NULL).
- * The approach is to do a level order traversal starting from root. In the traversal, once a node is found which is NOT a Full Node, all the following nodes must be leaf nodes.
+ * The approach is to do a level order traversal starting from root. In the traversal, once a node is found which is NOT a Full Node,
+ * all the following nodes must be leaf nodes.
  * Also, one more thing needs to be checked to handle the below case: If a node has empty left child, then the right child must be empty.
  * <p>
- * 1
- * /   \
- * 2     3
- * \
- * 4
+ *          1
+ *       /   \
+ *      2     3
+ *      \
+ *       4
  */
 
 
@@ -46,7 +47,7 @@ public class BinaryTreeIsCompleteOrNot {
         while (!queue.isEmpty()) {
 
             current = queue.poll();
-            /* Ceck if left child is present*/
+            /* Check if left child is present*/
             if (current.left != null) {
 
                 //enqueue

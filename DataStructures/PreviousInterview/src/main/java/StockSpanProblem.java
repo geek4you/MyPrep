@@ -23,14 +23,13 @@ import java.util.Deque;
  * push the value of day i back into the stack.
  */
 
-// FIXME
 public class StockSpanProblem {
 
     public static void calculateSpan(int[] price, int[] span) {
 
         // create stack and push first element into the stack
         Deque<Integer> stack = new ArrayDeque<Integer>();
-        stack.push(price[0]);
+        stack.push(0);
 
         // Span value of first element is always 1
         span[0] = 1;

@@ -13,6 +13,14 @@
  * than both n1 and n2 then our LCA lies in left side of the node, if it's is smaller than both n1 and n2, then LCA
  * lies on right side. Otherwise root is LCA (assuming that both n1 and n2 are present in BST)
  */
+
+/**
+ * Method 2:
+ *
+ * calculate the list of ancestors for each node
+ find the common prefix
+ the last element from the common prefix is the lowest common ancestor
+ */
 public class LowestCommonAncestor {
 
     public static Node lca(Node root, int x, int y) {

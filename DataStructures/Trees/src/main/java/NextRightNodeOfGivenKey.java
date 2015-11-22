@@ -14,11 +14,11 @@ import java.util.Deque;
  * <p>
  * For example, consider the following Binary Tree. Output for 2 is 6, output for 4 is 5. Output for 10, 6 and 5 is NULL.
  * <p>
- * 10
- * /      \
- * 2         6
- * /   \         \
- * 8      4          5
+ *          10
+ *       /      \
+ *      2         6
+ *    /   \         \
+ *   8      4          5
  */
 public class NextRightNodeOfGivenKey {
 

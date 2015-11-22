@@ -2,6 +2,8 @@
  * Created by chanumolu on 7/7/15.
  */
 
+import java.util.Arrays;
+
 /**
  * @link : http://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/
  * <p>
@@ -28,7 +30,7 @@ public class BinaryTreeHeightBalanced {
 
     /* Takes O(n) time */
     /*Above implementation can be optimized by calculating the height in the same recursion rather than calling a height()
-     function separately. Thanks to Amar for suggesting this optimized version. This optimization reduces time complexity to O(n). */
+     function separately. This optimization reduces time complexity to O(n). */
 
     /* The function returns true if root is balanced else false
    The second parameter is to store the height of tree.
@@ -41,6 +43,7 @@ public class BinaryTreeHeightBalanced {
         IntegerObject lh = new IntegerObject(0);
         IntegerObject rh = new IntegerObject(0);
 
+        // System.out.println(Arrays.toString(Thread.currentThread().getStackTrace()));
         /* l will be true if left subtree is balanced
         and r will be true if right subtree is balanced */
         boolean l = false, r = false;

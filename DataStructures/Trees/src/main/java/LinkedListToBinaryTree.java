@@ -21,11 +21,11 @@ import java.util.Deque;
  * <p>
  * The above linked list represents the following binary tree
  * <p>
- * 10
- * /       \
- * 12        15
- * /.\        /
- * 25   30    36
+ *              10
+ *           /       \
+ *          12        15
+ *          /.\        /
+ *        25   30    36
  * <p>
  * <p>
  * We are mainly given level order traversal in sequential access form. We know head of linked list is always is root

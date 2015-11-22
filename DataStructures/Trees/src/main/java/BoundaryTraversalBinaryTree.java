@@ -36,7 +36,7 @@ public class BoundaryTraversalBinaryTree {
             // before calling itself for left subtree
             System.out.println(current.data);
             printLeftNodesTopToBottom(current.left);
-        } else if (current.right != null) {
+        } else if (current.right != null) { // come to the right child only if you don't have left child
             System.out.println(current.data);
             printLeftNodesTopToBottom(current.right);
         }

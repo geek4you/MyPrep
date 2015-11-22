@@ -4,38 +4,40 @@
 
 /**
  * @link : http://www.geeksforgeeks.org/foldable-binary-trees/
+ * A tree can be folded if left and right subtrees of the tree are structure wise mirror image of each other.
+ * An empty tree is considered as foldable.
  * Consider the below trees:
  * (a) and (b) can be folded.
  * (c) and (d) cannot be folded.
  * <p>
  * (a)
- * 10
- * /    \
- * 7      15
- * \    /
- * 9  11
+ *      10
+ *    /    \
+ *   7      15
+ *    \    /
+ *    9  11
  * <p>
  * (b)
- * 10
- * /  \
- * 7    15
- * /      \
- * 9       11
+ *      10
+ *     /  \
+ *    7    15
+ *   /      \
+ *  9       11
  * <p>
  * (c)
- * 10
- * /  \
- * 7   15
- * /    /
- * 5   11
+ *       10
+ *      /  \
+ *     7   15
+ *    /    /
+ *   5   11
  * <p>
  * (d)
  * <p>
- * 10
- * /   \
- * 7     15
- * /  \    /
- * 9   10  12
+ *      10
+ *     /   \
+ *    7     15
+ *   /  \    /
+ *  9   10  12
  */
 public class FoldableBinaryTrees {
 

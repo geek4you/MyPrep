@@ -24,6 +24,14 @@ Output: The given BST is converted to following Binary Tree
 20     13
  */
 
+
+/**
+ * Solution: Do reverse Inoorder traversal. Keep track of the sum of nodes visited so far. Let this sum be sum.
+ * For every node currently being visited, first add the key of this node to sum, i.e. sum = sum + node->key.
+ * Then change the key of current node to sum, i.e., node->key = sum.
+ When a BST is being traversed in reverse Inorder, for every key currently being visited, all keys that are already
+ visited are all greater keys.
+ */
 // TODO: very interesting . Try again!!
 public class BSTToBinaryTreeSumOfGreaterKeysIsAddedToEveryKey {
 

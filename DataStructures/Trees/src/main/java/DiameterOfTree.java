@@ -21,6 +21,11 @@
 public class DiameterOfTree {
 
 
+    /**
+     * This method takes O(n^2). See the second method
+     * @param root
+     * @return
+     */
     // height is the largest depth from root
     public static int diameter(Node root){
         // use post order traversal as you need to come from down to up.
@@ -46,6 +51,32 @@ public class DiameterOfTree {
         return c;
     }
 
+    static int diameterOptimized(Node root, IntegerHolder height ){
+        if(null == root)
+            return 0;
+
+        // get the heights of left and right subtrees along with the same recursion function
+        IntegerHolder lh = new IntegerHolder(0);
+        IntegerHolder rh = new IntegerHolder(0);
+
+        // get the diameters of left and right subtrees
+        int lDiameter = diameterOptimized(root.left,lh);
+        int rDiameter = diameterOptimized(root.right,rh);
+
+        height.h = ((lh.h>rh.h)?lh.h:rh.h)+1;
+
+        return max(lh.h+rh.h+1, lDiameter, rDiameter);
+
+    }
+
+    static class IntegerHolder{
+        int h;
+
+        public IntegerHolder(int h) {
+            this.h = h;
+        }
+    }
+
     public static void main(String[] args) {
         Node root = new Node(50);
         root.left = new Node(7);
@@ -54,6 +85,7 @@ public class DiameterOfTree {
         root.left.right = new Node(5);
         root.right.left = new Node(1);
         root.right.right = new Node(30);
-        System.out.println("Diameter: "+diameter(root));
+        System.out.println("Diameter: " + diameter(root));
+        System.out.println("Diameter: "+diameterOptimized(root, new IntegerHolder(0)));
     }
 }

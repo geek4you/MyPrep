@@ -4,20 +4,17 @@
 
 import java.util.*;
 
-/**
- * TODO : fix this code
- */
 public class DistinctPermutationsOfString {
 
     public static void permutations(char[] arr){
-        Set<String> set = new TreeSet<String>();
+        Map<String,Integer> map = new HashMap<String,Integer>();
         Arrays.sort(arr);
-        set.add(new String(arr));
+        map.put(new String(arr), 1);
         while(nextPermutation(arr)){
-            set.add(new String(arr));
+            map.put(new String(arr), 1);
         }
 
-        for(String i : set)
+        for(String i : map.keySet())
             System.out.println(i);
     }
 
@@ -26,7 +23,8 @@ public class DistinctPermutationsOfString {
         int k = arr.length - 2;
 
         // find longest decreasing suffix
-        while (k >= 0 && arr[k] > arr[k + 1]) {
+        // the only difference from next permutation is use arr[k]>=arr[k+1]
+        while (k >= 0 && arr[k] >= arr[k + 1]) {
             --k;
         }
 

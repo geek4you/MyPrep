@@ -6,7 +6,8 @@
  * @link : http://www.geeksforgeeks.org/print-all-combinations-of-given-length/
  *
  * Print all possible strings of length k that can be formed from a set of n characters
-Given a set of characters and a positive integer k, print all possible strings of length k that can be formed from the given set.
+Given a set of characters and a positive integer k, print all possible strings of length k that can be formed from
+the given set.
 
 Examples:
 
